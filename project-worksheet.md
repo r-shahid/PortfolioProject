@@ -26,7 +26,7 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 
 ## Wireframes
 
-* [Mobile](https://i.imgur.com/RDNHl1k.png)
+* [Mobile](https://i.imgur.com/CBIkFcr.png)
 
  A single-column layout with projects at the top and a long bio and contact form at the bottom. Menu shows as a hamburger icon and clicking each section scrolls down the page.
 
