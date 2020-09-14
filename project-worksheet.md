@@ -18,7 +18,7 @@ This schedule keeps track of my progress throughout the week.
 
 ## Project Description
 
-My portfolio website will include a short bio, links to all my projects, and a contact form. The layout I have in mind will highlight my best/favorite project while showing recent projects in a carousel. I'm inspired by blogs like [EggCanvas](https://www.eggcanvas.com/) and my college friend's [personal website](https://www.isabelcalkins.com/). I find their layouts really appealing and modern, which I hope to embody in this project. I'm also taking elements from [my own website](https://rianashahid.com/about), which was created on pre-bulit templates that don't require much coding knowledge. I'm not at a place where I can recreate the entire site from scratch, but I really like the layout I have on my About page, so I plan on doing something similar for my Desktop version. 
+My portfolio website will include a short bio, links to all my projects, and a contact form. The layout I have in mind will highlight my best/favorite project while showing recent projects in a carousel. I'm inspired by blogs like [EggCanvas](https://www.eggcanvas.com/) and my friend's [personal website](https://www.isabelcalkins.com/). I find their layouts really appealing and modern, which I hope to embody in this project. I'm also taking elements from [my own website](https://rianashahid.com/about), which was created on pre-bulit templates that don't require much coding knowledge. I'm not at a place where I can recreate the entire site from scratch, but I really like the layout I have on my About page, so I plan on doing something similar for my Desktop version. 
 
 ## Google Sheet
 
@@ -26,17 +26,17 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 
 ## Wireframes
 
-* [Mobile](https://imgur.com/a/AF7gAd7
-)
+* [Mobile](https://i.imgur.com/RDNHl1k.png)
 
- A single-column layout with projects at the top and a long bio and contact form at the bottom. Menu shows has a hamburger icon and clicking each section scrolls down the page.  
-* [Desktop](https://i.imgur.com/xpOWo0E.jpg)
+ A single-column layout with projects at the top and a long bio and contact form at the bottom. Menu shows as a hamburger icon and clicking each section scrolls down the page.
 
-Wireframing Resources:
+* [Tablet](https://i.imgur.com/DPxS9z3.png)
 
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
-
+ Similar to the Mobile version, projects are at the top and a bio and contact form are at the bottom of the page. Full nav bar instead of a hamburger icon. 
+ 
+* [Desktop](https://i.imgur.com/R0TOVMO.png)
+ 
+ Unlike the other two versions, my bio is at the top. I felt this would be more appropriate for desktop because it's easier for users to scroll down to get to the projects. On a smaller screen, where users will probably spend less time per page, it's better to have projects at the top, to make sure viewers will see it. 
 
 ## Time/Priority Matrix 
 
