@@ -1,5 +1,14 @@
+.tabletheader {
+    display: none;
+}
 nav{
     background-color: pink;
+}
+#nav-tablet {
+    display: none;
+}
+#nav-desktop{
+    display: none;
 }
 button {
     background-color: none;
@@ -51,7 +60,12 @@ button {
     background-color: lightgray;
     margin: 10px;
     height:200px;
-
+}
+.carousel .three{
+    display: none;
+}
+.carousel .four {
+    display: none;
 }
 .keyProject {
     background-color: lightgreen;
@@ -68,7 +82,7 @@ button {
     width: 100%;
     margin: auto;
 }
-.allProjects {
+.allProjectsMobile {
     background-color: green;
     display: flex;
     flex-direction: column;
@@ -124,4 +138,82 @@ button {
 }
 footer {
     background-color: lavender;
+    text-align: center;
 }
+.desktopSocialFooter {
+    display: none;
+}
+
+/* tablet styling */
+@media screen and (min-width: 768px){
+    /* * {
+        background-color: lime;
+    } */
+    .tablet {
+        display: flex;
+    }
+    #nav-mobile {
+        display: none;
+    }
+    #nav-tablet {
+        display: flex;
+    }
+    #nav-tablet div{
+        display: inline;
+    }
+    .carousel .two {
+        display: none;
+    }
+    .carousel .three {
+        display: flex;
+    }
+    .allProjectsMobile {
+        display: none;
+    }
+    .allProjectsTablet{
+        background-color: green;
+        text-align: center;
+    }
+    .allProjectsTablet div {
+    background-color: white;
+    /* align-items: center; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    }
+    /* USE CSS GRID 
+    change about section from one column 3 rows to 2 columns with one row in right col and 2 rows in left col */
+    /* CSS GRID
+    change contact section from one col one row to 2 col 1 row */
+}
+@media screen and (min-width:1024px){
+    /* * {
+        background-color: pink
+    } */
+    .tabletheader {
+        display: none;
+    }
+    #nav-tablet {
+        display: none;
+    }
+    #nav-desktop {
+        display: flex;
+    }
+    .tagline {
+        display: none;
+    }
+    /* entire page gets css grid styling
+    5 rows */
+    /* about me section goes in top row without social links*/
+    .carousel .three {
+        display: none;
+    }
+    .carousel .four {
+        display: flex;
+    }
+    .desktopSocialFooter {
+        display: flex;
+        justify-content: center;
+    }
+}   
