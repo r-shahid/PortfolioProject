@@ -7,14 +7,14 @@ This schedule keeps track of my progress throughout the week.
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|MON| Project Description | Incomplete
-|MON| Wireframes / Priority Matrix / Timeline | Incomplete
-|TUE| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|MON| Project Description | Complete
+|MON| Wireframes / Priority Matrix / Timeline | Complete
+|TUE| Core Application Structure (HTML, CSS, etc.) | Complete
 |WED| MVP & Bug Fixes | Incomplete
 |THU| Final Touches | Incomplete
 |FRI| Present | Incomplete
 
-<!-- Change Incomplete to Approved -->
+
 
 ## Project Description
 
@@ -28,15 +28,15 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 
 * [Mobile](https://i.imgur.com/CBIkFcr.png)
 
- A single-column layout with projects at the top and a long bio and contact form at the bottom. Menu shows as a hamburger icon and clicking each section scrolls down the page.
+  A single-column layout with projects at the top and a long bio and contact form at the bottom. Menu shows as a hamburger icon and clicking each section scrolls down the page.
 
 * [Tablet](https://i.imgur.com/DPxS9z3.png)
 
- Similar to the Mobile version, projects are at the top and a bio and contact form are at the bottom of the page. Projects displayed in two columns and full nav bar instead of a hamburger icon. 
+  Similar to the Mobile version, projects are at the top and a bio and contact form are at the bottom of the page. Projects displayed in two columns and full nav bar instead of a hamburger icon. 
  
 * [Desktop](https://i.imgur.com/R0TOVMO.png)
  
- Unlike the other two versions, my bio is at the top. I felt this would be more appropriate for desktop because it's easier for users to scroll down to get to the projects. On a smaller screen, where users will probably spend less time per page, it's better to have projects at the top, to make sure viewers will see it. 
+  Unlike the other two versions, my bio is at the top. I felt this would be more appropriate for desktop because it's easier for users to scroll down to get to the projects. On a smaller screen, where users will probably spend less time per page, it's better to have projects at the top, to make sure viewers will see it. 
 
 ## Time/Priority Matrix 
 
@@ -69,16 +69,16 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Core Structure | H | 3hr | hr |
-| Flexbox | H | 2hr | hr |
-| Nav Bar/Hamburger | H | 1hr | hr |  
-| Responsive Design | H | 3hr|  hr | 
-| Working with API| M | 3hr | hr|
+| Core Structure | H | 3hr | 3hr |
+| Flexbox | H | 2hr | 1.5hr |
+| Nav Bar/Hamburger | H | 1hr | 2hr |  
+| Responsive Design | H | 3hr|  4hr | 
+| Working with API| M | 3hr | 4hr|
 | Contact Form | M | 2hrs|  hr | 
 | Social Media Icons | L | 1hr | hr |
 | About Me | M | 1hr | hr |
 | Styling/Images | M | 3 hr | hr |
-| Total | - | 19hrs| hrs |
+| Total | - | 19hrs| 14.5hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
@@ -93,13 +93,31 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 ## Additional Libraries
 This section will contain all supporting libraries.
 
+<!-- add bootstrap once I do the carousel -->
+
 ## Code Snippet
 
 This section will contain interesting code snippets (likely will include parallax scrolling)
+<!-- add code for how I embedded the content from my google sheet -->
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
+**9/14**  
+* Bootstrap's breakpoint for mobile (576px) was smaller than the breakpoint I had set (768px)
+
+  My original navbar (bootstrap) was expanding from a hamburger to a regular navbar much sooner than the rest of the page. I initially just changed my mobile breakpoint to 576px, but I ended up not using Bootstrap's navbar.
+
+**9/15**  
+* My footer overlapped the end of the content above it only when in a wider screen. I implemented some weird grid setting and it seems to have fixed it.
+
+  body contains main and footer. I assigned main to the first row and footer to the second:  
+   ``` 
+   body {
+        display: grid;
+        grid-template: 19fr 1fr / 100%; 
+    } 
+    ```
+
+<!-- #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**RESOLUTION**: Missing comma after first object in sources {} object -->
