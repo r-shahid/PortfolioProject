@@ -188,16 +188,34 @@ button {
 .contact {
 	background-color: lightsteelblue;
 	background-image: INSERT LATER;
-	display: flex;
-    justify-content: center;
+	display: grid;
+	grid-template: 100% / 2fr 1fr;
+	/* display: flex;
+    justify-content: center; */
     /* margin: 0; */
 }
 #form {
 	background-color: lightskyblue;
+	text-align: left;
+	padding: 20px;
+}
+#form button {
+	/* position: relative;
+	left: 30%; */
+	/* border: none; */
+	color: white;
+	background-color: aqua;
+	padding: 5px 60px;
+	text-align: center;
+	/* display: inline-block; */
+	font-size: 16px;
+	margin: 4px 10px;
+	
+	cursor: pointer;
 }
 .contactform {
-	width: 200px;
-	height: 140px;
+	/* width: 200px;
+	height: 140px; */
 	background-color: white;
 	/* margin: auto; */
 }
@@ -213,7 +231,7 @@ footer {
 }
 
 /* tablet styling */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
 	/* * {
         background-color: lime;
     } */
@@ -280,7 +298,7 @@ footer {
 		justify-content: center;
 		margin: 10px;
     } */ 
-    .contact {
+    /* .contact {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -290,7 +308,7 @@ footer {
     }
     .contact .backgroundImage {
         grid-area: 1/1/2/2;
-    }
+    } */
 	/* USE CSS GRID 
     change about section from one column 3 rows to 2 columns with one row in right col and 2 rows in left col */
 	/* CSS GRID
@@ -352,7 +370,18 @@ footer {
 	}
 	.embedprojects {
 		max-width: 250px;
+		/* display: grid; */
+		grid-template: 100%/100%;
 		/* height: 100%; */
+	}
+	.embedprojects h3 {
+		display: none;
+	}
+	.embedprojects p {
+		display: none;
+	}
+	.embedprojects a {
+		display: none;
 	}
     .body #contact {
         grid-row: 4/5;
