@@ -114,7 +114,7 @@ button {
     background-color: lightgoldenrodyellow;
     margin: 10px 0;
 }
-.carousel div {
+/* .carousel div {
 	display: flex;
 	justify-content: space-between;
 }
@@ -129,7 +129,7 @@ button {
 }
 .carousel .four {
 	display: none;
-}
+} */
 .keyProject {
 	background-color: lightgreen;
     padding: 20px;
@@ -246,12 +246,12 @@ footer {
 		text-align: center;
 	}
 
-	.carousel .two {
+	/* .carousel .two {
 		display: none;
 	}
 	.carousel .three {
 		display: flex;
-	}
+	} */
 	#Projects {
 		display: grid;
 		grid-template: 1fr 3fr 3fr 3fr/ repeat(2, 1fr);
