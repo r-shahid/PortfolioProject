@@ -10,7 +10,7 @@ This schedule keeps track of my progress throughout the week.
 |MON| Project Description | Complete
 |MON| Wireframes / Priority Matrix / Timeline | Complete
 |TUE| Core Application Structure (HTML, CSS, etc.) | Complete
-|WED| MVP & Bug Fixes | Incomplete
+|THU| MVP & Bug Fixes | Incomplete
 |THU| Final Touches | Incomplete
 |FRI| Present | Incomplete
 
@@ -74,18 +74,18 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 | Nav Bar/Hamburger | H | 1hr | 2hr |  
 | Responsive Design | H | 3hr|  4hr | 
 | Working with API| M | 3hr | 4hr|
-| Contact Form | M | 2hrs|  hr | 
-| Social Media Icons | L | 1hr | hr |
+| Contact Form | M | 2hrs|  1.5hr | 
+| Social Media Icons | L | 1hr | 1hr |
 | About Me | M | 1hr | hr |
 | Styling/Images | M | 3 hr | hr |
-| Total | - | 19hrs| 14.5hrs |
+| Total | - | 19hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Carousel | H | 3hr| hr | 
 | Show Project Desc on Hover | M | 3hr | hr |
-| Materialize | H | 4hr | hr |
+| ~~Materialize~~ | ~~H~~ | ~~4hr~~ | ~~hr~~ |
 | Bootstrap | H | 4hr | hr |
 | Make Logo Image | L | 2hr | hr |
 | Total | H | 16hrs| hrs |
@@ -114,10 +114,14 @@ This section will contain interesting code snippets (likely will include paralla
    ``` 
    body {
         display: grid;
-        grid-template: 19fr 1fr / 100%; 
+        grid-template: 23fr 1fr / 100%; 
     } 
     ```
 
+**9/16**
+* Implemented code to show project descriptions on hover, but this made the View Project links unclickable. As an alternative, I tried to make each image a link, but this linked every project to that of the last project added.
+
+  fix tbd
 <!-- #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object -->
