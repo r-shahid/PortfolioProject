@@ -2,6 +2,9 @@ body {
 	max-width: 1200px !important;
 	margin: auto;
 }
+.hero-image {
+	display: none;
+}
 .embedprojects {
     max-width: 500px;
     height: 200px;
@@ -17,7 +20,7 @@ body {
 .embedprojects h3 {
     font-size: 20px;
 	grid-area: 1/2/2/3;
-    padding-left: 10px;
+	padding-left: 10px;
 }
 .desc {
     grid-area: 2/2/3/3;
@@ -168,7 +171,8 @@ button {
 	flex-direction: column;
 	align-items: center;
     padding: 20px;
-    margin: 10px 0;
+	margin: 10px 0;
+	/* height: fit-content; */
 }
 .aboutMe div {
 	background-color: white;
@@ -183,34 +187,61 @@ button {
 	margin-top: 0;
 }
 .social {
-	background-color: white;
+	background-color: none;
+}
+.social ul{
+	padding: 10px;
+	background-color:none;
+}
+.social li {
+	display: inline;
+	background-color: none;
+	color: white;
+	/* padding: 5px; */
+	margin: 5px 10px;
+}
+li a {
+	color: inherit; 
+	/* to stop the icon from turning blue */
 }
 .contact {
 	background-color: lightsteelblue;
 	background-image: INSERT LATER;
-	display: grid;
-	grid-template: 100% / 2fr 1fr;
+	/* display: grid;
+	grid-template: 100% / 2fr 1fr; */
 	/* display: flex;
     justify-content: center; */
     /* margin: 0; */
 }
 #form {
-	background-color: lightskyblue;
+	background-color: none;
+	padding: 0 100px;
 	text-align: left;
-	padding: 20px;
+	/* margin: auto; */
+}
+form {
+	/* width: 100%; */
+	/* margin: auto; */
+	background-color: pink;
+}
+form label {
+	margin: 2px;
+	/* width: 100%; */
+}
+input, textarea {
+	width: 100%;
 }
 #form button {
 	/* position: relative;
 	left: 30%; */
-	/* border: none; */
+	border: 2px solid black;
 	color: white;
 	background-color: aqua;
-	padding: 5px 60px;
+	padding: 5px;
 	text-align: center;
 	/* display: inline-block; */
 	font-size: 16px;
-	margin: 4px 10px;
-	
+	/* margin: 4px;	 */
 	cursor: pointer;
 }
 .contactform {
@@ -220,7 +251,8 @@ button {
 	/* margin: auto; */
 }
 .contact button {
-	align-self: flex-end;
+	/* align-self: flex-end; */
+	width: 100%;
 }
 footer {
 	background-color: lavender;
@@ -253,6 +285,13 @@ footer {
 		display: flex;
 		justify-content: space-between;
 	}
+	.nav-social {
+		padding: 5px;
+	}
+	.nav-social li{
+		display: inline;
+		padding: 3px 10px;
+	}
 	.tablet-links {
 		display: inline;
 	}
@@ -279,7 +318,7 @@ footer {
 		grid-area: 1/1/2/3;
 	}
 	.embedprojects {
-		max-width: 250px;
+		/* max-width: 250px; */
 		/* height: 100%; */
 	}
 	/* .allProjectsMobile {
@@ -298,7 +337,7 @@ footer {
 		justify-content: center;
 		margin: 10px;
     } */ 
-    /* .contact {
+    .contact {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -308,7 +347,7 @@ footer {
     }
     .contact .backgroundImage {
         grid-area: 1/1/2/2;
-    } */
+    }
 	/* USE CSS GRID 
     change about section from one column 3 rows to 2 columns with one row in right col and 2 rows in left col */
 	/* CSS GRID
@@ -316,9 +355,20 @@ footer {
 }
 @media screen and (min-width: 1024px) {
     body{
-        display: grid;
-        grid-template: 19fr 1fr / 100%;
-    }
+        /* display: grid;
+        grid-template: 19fr 1fr / 100%; */
+	}
+	.hero-image{
+		display: block;
+		background-image: url('https://i.imgur.com/sOC5y6o.png');
+		background-color: #cccccc; /* Used if the image is unavailable */
+  		height: 600px; /* You must set a specified height */
+  		background-position: center; /* Center the image */
+  		background-repeat: no-repeat; /* Do not repeat the image */
+  		background-size: cover;
+		color: white;
+	
+	}
     main{
         grid-row: 1/2;
         grid-column: 1/2;
@@ -371,17 +421,22 @@ footer {
 	.embedprojects {
 		max-width: 250px;
 		/* display: grid; */
-		grid-template: 100%/100%;
+		grid-template: 1fr 1fr 1fr 1fr/100%;
 		/* height: 100%; */
 	}
-	.embedprojects h3 {
-		display: none;
+	.embedprojects .project-title {
+		grid-area: 1/1/2/2;	
+		margin: 10px;	
 	}
-	.embedprojects p {
-		display: none;
+	.embedprojects .desc {
+		grid-area: 2/1/3/5;
+	}
+	.embedprojects .skills {
+		grid-area: 3/1/4/5;
 	}
 	.embedprojects a {
-		display: none;
+		grid-area: 4/1/5/5;
+		/* display: none; */
 	}
     .body #contact {
         grid-row: 4/5;
@@ -409,22 +464,53 @@ footer {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
 		text-align: center;
-    }
-	.tagline {
-		display: none;
+		overflow: hidden;
 	}
 
-	/* entire page gets css grid styling
-    5 rows */
-	/* about me section goes in top row without social links*/
-	.carousel .three {
+/* Navbar links */
+#nav-desktop a {
+  /* float: left; */
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+.tagline {
 		display: none;
-	}
-	.carousel .four {
-		display: flex;
-	}
-	.desktopSocialFooter {
-		display: flex;
-		justify-content: center;
-	}
+}
+.carousel .three {
+	display: none;
+}
+.carousel .four {
+	display: flex;
+}
+.desktopSocialFooter {
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+}
+.desktopSocialFooter li {
+	display: inline;
+	margin: 5px;
+	padding: 10px;
+}
+.project-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s;
+  backface-visibility: hidden;
+}
+
+.embedprojects:hover .project-img {
+  opacity: 0.1;
+}
 }
