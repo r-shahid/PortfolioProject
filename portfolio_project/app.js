@@ -6,12 +6,12 @@ fetch(url)
 		console.log(json);
 		json.feed.entry.forEach((ent) => {
 			const $div = $('<div>').addClass('embedprojects');
-			$('#Projects').append($div);
+			$('#Projects').prepend($div);
 			const $img = $('<img>');
-			$img.attr('src', ent.gsx$image.$t);
+			$img.attr('src', ent.gsx$image.$t).addClass('project-img');
 			$($div).append($img);
 			const $title = $('<h3>');
-			$title.text(ent.gsx$title.$t);
+			$title.text(ent.gsx$title.$t).addClass('project-title');
 			$($div).append($title);
 			const $desc = $('<p>').addClass('desc');
 			$desc.text(ent.gsx$description.$t);
@@ -24,18 +24,10 @@ fetch(url)
 				.text('View Project')
 				.attr('href', ent.gsx$link.$t)
 				.addClass('projectLink');
-			$($div).append($link);
+			$($div).append($link)
 
-			// const $btn = $('<div>').addClass('projectbutton')
-			// $btn.html(<button><a href='ent.gsx$link.$t'>View Project</a></button>)
-			// $($div).append($btn)
-
-			// const $btn = $('<button>');
-			// $btn.text('View Project');
-			//// $btn.attr('href',ent.gsx$link.$t)
-			// $($div).append($btn);
-			// const $link = $('<a>');
-			// $link.attr('href', ent.gsx$link.$t);
-			// $($btn).append($link);
+		$('.embedprojects').click(function() {
+			window.location.href = ent.gsx$link.$t
+		});
 		});
 	});
