@@ -10,7 +10,7 @@ This schedule keeps track of my progress throughout the week.
 |MON| Project Description | Complete
 |MON| Wireframes / Priority Matrix / Timeline | Complete
 |TUE| Core Application Structure (HTML, CSS, etc.) | Complete
-|THU| MVP & Bug Fixes | Incomplete
+|THU| MVP & Bug Fixes | Complete
 |THU| Final Touches | Incomplete
 |FRI| Present | Incomplete
 
