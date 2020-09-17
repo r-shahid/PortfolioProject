@@ -355,8 +355,9 @@ footer {
 }
 @media screen and (min-width: 1024px) {
     body{
-        /* display: grid;
-        grid-template: 19fr 1fr / 100%; */
+        display: grid;
+		grid-template: 23fr 1fr / 100%;
+		grid-gap: 10px;
 	}
 	.hero-image{
 		display: block;
@@ -376,7 +377,8 @@ footer {
     footer{
 		padding: 20px;
         grid-row: 2/3;
-        grid-column: 1/2;
+		grid-column: 1/2;
+		/* position: fixed; */
     }
     .body{
         display: grid;
