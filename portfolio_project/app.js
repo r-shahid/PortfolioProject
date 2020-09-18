@@ -26,8 +26,8 @@ fetch(url)
 				.addClass('projectLink');
 			$($div).append($link)
 
-		$('.embedprojects').click(function() {
-			window.location.href = ent.gsx$link.$t
-		});
+		// $('.embedprojects').click(function() {
+		// 	window.location.href = ent.gsx$link.$t
+		// });
 		});
 	});

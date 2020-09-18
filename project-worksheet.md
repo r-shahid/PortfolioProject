@@ -121,7 +121,7 @@ This section will contain interesting code snippets (likely will include paralla
 **9/16**
 * Implemented code to show project descriptions on hover, but this made the View Project links unclickable. As an alternative, I tried to make each image a link, but this linked every project to that of the last project added.
 
-  fix tbd
+  I made it so hovering over the image toggled backface-visibility from hidden to visible.
 <!-- #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object -->
