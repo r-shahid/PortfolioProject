@@ -10,13 +10,15 @@
     .nav-tablet {
         display: flex;
         justify-content: space-between;
-        background-color: #A74330;
+        background-color: var(--rich-black);
     }
     .title {
-        color: white;
+        color: var(--timberwolf);
+        padding: 5px;
     }
     .nav-social {
-		padding: 5px;
+        padding: 5px;
+        align-self: center;
 	}
 	.nav-social li{
 		display: inline;
@@ -24,22 +26,24 @@
     }
     .nav-social li a {
         text-decoration: none;
-        color: white;
+        color: var(--timberwolf);
     }
     .tablet-links {
         display: inline;
     }
 	.links {
-		background-color: #ac6b5e;
+		background-color: var(--blue);
 		display: grid;
 		grid-template-columns: 2fr 2fr 1fr 2fr 2fr;
 		grid-template-rows: 1fr;
         text-align: center;
+        
     }
     .links a {
-        color: white;
-        font-family: 'fauna one', serif;
+        color: var(--timberwolf);
+        font-family: 'montserrat', sans-serif;
         font-size: 14px;
+        font-weight: 700;
         padding: 10px 0;
         
     }
