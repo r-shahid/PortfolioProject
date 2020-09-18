@@ -101,7 +101,7 @@ body {
 	min-height: 300px;
 	width: 100%;
 	opacity: 0.4;
-	/* setting a background color on the img container and then making the images translucent helps make their colors look a little more coherent i.e less ugly */
+	/* setting a background color on the img container and then making the images translucent helps make their colors look a little more coherent i.e marginally less ugly */
 }
 .carousel-inner h5 {
 	font-family: 'montserrat', sans-serif;
@@ -184,7 +184,11 @@ body {
 	font-weight: 600;
 	background-color: var(--carmine);
 	color: var(--timberwolf);
+}
+.project-link:hover {
 	text-decoration: none;
+	background-color: var(--timberwolf);
+	color: var(--carmine);
 }
 .aboutme {
 	position: relative;
@@ -219,6 +223,9 @@ body {
 	font-size: 26px;
     margin: 10px 0 20px 0;
 }
+.about-skills {
+	padding: 20px 0 5px 0;
+}
 .social ul {
     margin-top: 10px;
     grid-area: 3/1/4/2;
@@ -247,7 +254,8 @@ li a:hover {
 .contact h3 {
 	font-family: 'montserrat', sans-serif;
 	font-weight: 800;
-    font-size: 20px;
+	font-size: 20px;
+	text-shadow: 3px 3px 5px black;
 }
 #form {
 	background-color: none;
@@ -259,6 +267,7 @@ form {
     font-family: 'montserrat', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
+	text-shadow: 3px 3px 5px black;
 }
 form label {
 	margin: 2px;
@@ -270,12 +279,19 @@ input, textarea {
 #form button {
 	border: 2px solid var(--rich-black);
 	color: white;
+	text-shadow: 3px 3px 5px rgb(122, 2, 2);
 	background-color: var(--carmine);
 	padding: 5px;
 	text-align: center;
 	font-size: 16px;
+	font-weight: 700;
     cursor: pointer;
     width: 100%;
+}
+#form button:hover {
+	color: var(--blue);
+	background-color: var(--timberwolf);
+	text-shadow: none;
 }
 
 

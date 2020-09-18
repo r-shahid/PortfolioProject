@@ -28,6 +28,9 @@
         text-decoration: none;
         color: var(--timberwolf);
     }
+    .nav-social li a:hover {
+        color: var(--carmine);
+    }
     .tablet-links {
         display: inline;
     }
@@ -45,7 +48,10 @@
         font-size: 14px;
         font-weight: 700;
         padding: 10px 0;
-        
+        text-decoration: none;
+    }
+    .links a:hover {
+        color: var(--carmine);
     }
     .links div img {
         width: 40px;

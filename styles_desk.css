@@ -20,7 +20,9 @@
     }
     .nav-desk-social ul{
         display: flex;
-
+    }
+    .nav-desktop a:hover {
+        color: var(--carmine);
     }
     
     .hero-image {
@@ -60,20 +62,19 @@
         grid-area: 4/1/5/5;
     }
     .project-img {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s;
-  backface-visibility: hidden;
-}
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        backface-visibility: hidden;
+    }
 
-.embedprojects:hover .project-img {
-  backface-visibility: visible;
-}
+    .embedprojects:hover .project-img {
+        backface-visibility: visible;
+    }
 
-.embedprojects:hover .project-title, .desc, .skills{
-    background-color: rgb(255, 255, 255, .8);
-}
+    .embedprojects:hover .project-title, .desc, .skills{
+        background-color: rgb(255, 255, 255, .8);
+    }
 
 }
