@@ -72,7 +72,7 @@ After seeing how the page looked, I ended up getting rid of the full-width proje
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Core Structure | H | 3hr | 3hr |
+| Core Structure | H | 3hr | 4hr |
 | Flexbox | H | 2hr | 1.5hr |
 | Nav Bar/Hamburger | H | 1hr | 2hr |  
 | Responsive Design | H | 3hr|  4hr | 
@@ -87,11 +87,11 @@ After seeing how the page looked, I ended up getting rid of the full-width proje
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Carousel | H | 3hr| 2hr | 
-| Show Project Desc on Hover | M | 3hr | 3hr |
+| Show Project Desc on Hover | M | 3hr | 4hr |
 | ~~Materialize~~ | ~~H~~ | ~~4hr~~ | ~~hr~~ |
 | Bootstrap | H | 4hr | 4hr |
 | Make Logo Images | L | 2hr | 1hr |
-| Total | H | 16hrs| 10hrs |
+| Total | H | 16hrs| 11hrs |
 
 ## Additional Libraries
 This section will contain all supporting libraries.
@@ -102,7 +102,19 @@ This section will contain all supporting libraries.
 
 ## Code Snippet
 
-Here's how I got a parallax scrolling effect:
+An easier way to manage colors throughout my CSS files:
+```
+:root {
+  --blue: #19647E;
+  --eggplant: #674857;
+  --timberwolf: rgb(209, 205, 197);
+  --carmine: #B3533E;
+  --rich-black: #111A29;
+}
+```
+I called each color by var(--name) instead of copy/pasting the hex code every time. (from the Intro to jQuery lesson)
+***
+Here's how I got the parallax scrolling effect:
 ```
 .hero-image {
         display: block;
@@ -114,6 +126,29 @@ Here's how I got a parallax scrolling effect:
 	    background-repeat: no-repeat;
 	    background-size: cover;
     }
+```
+***
+An attempt at making each project image clickable (see issue from 9/16): 
+```
+$('.embedprojects').click(function() {
+			window.location.href = ent.gsx$link.$t
+		 });
+```
+While this wasn't successful, I liked that it _sort of_ did what I wanted, even though it wasn't quite what I expected. Ultimately, I didn't have enough time to keep playing with this approach and had to make the projects clickable another way, but I would like to return to this in the future and try to figure out how to make it work. 
+
+Here's how I actually got the project links to work. The images themselves are not clickable, but now there's at least a working link:
+```
+.project-img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+}
+
+.embedprojects:hover .project-img {
+    backface-visibility: visible;
+}
 ```
 
 ## Issues and Resolutions
@@ -136,10 +171,11 @@ Here's how I got a parallax scrolling effect:
 **9/16**
 * Implemented code to show project descriptions on hover, but this made the View Project links unclickable. As an alternative, I tried to make each image a link, but this linked every project to that of the last project added.
 
-  I made it so hovering over the image toggled backface-visibility from hidden to visible.
+  The problem with my first attempt was that hovering over the image changed the opacity, revealing the project title, description, and link, but they were still "hidden" behind the image, so I could not actually click on them. I made it so hovering over the image toggled backface-visibility from hidden to visible so that I could now click on the View Project link.
 
 **9/17**  
-* I kept having more issues with overlapping divs, so I got rid of the grid layout on the entire page and only used it where necessary.
+* I kept having more issues with overlapping divs, so I got rid of the grid layout on the entire page and only used it where necessary. At this point, it was hard to keep track of exactly where I used grid vs flexbox, so I rewrote the html and css from scratch, cutting down redundant code. This fixed all the problems I was having with the layout, so I must have had some style rules that were messing everything up.
+* My CSS file was getting unmanageably long, so I separated it by screen size
 <!-- #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object -->
