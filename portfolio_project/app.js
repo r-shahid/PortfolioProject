@@ -6,7 +6,7 @@ fetch(url)
 		console.log(json);
 		json.feed.entry.forEach((ent) => {
 			const $div = $('<div>').addClass('embedprojects');
-			$('#Projects').prepend($div);
+			$('#Projects').append($div);
 			const $img = $('<img>');
 			$img.attr('src', ent.gsx$image.$t).addClass('project-img');
 			$($div).append($img);
@@ -23,9 +23,11 @@ fetch(url)
 			$link
 				.text('View Project')
 				.attr('href', ent.gsx$link.$t)
-				.addClass('projectLink');
+				.addClass('project-link');
 			$($div).append($link)
 
+
+		// an attempt at making each div with project clickable. This ended up linking everything to the newest project.
 		// $('.embedprojects').click(function() {
 		// 	window.location.href = ent.gsx$link.$t
 		// });
