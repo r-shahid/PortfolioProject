@@ -11,14 +11,14 @@ This schedule keeps track of my progress throughout the week.
 |MON| Wireframes / Priority Matrix / Timeline | Complete
 |TUE| Core Application Structure (HTML, CSS, etc.) | Complete
 |THU| MVP & Bug Fixes | Complete
-|THU| Final Touches | Incomplete
+|THU| Final Touches | Complete
 |FRI| Present | Incomplete
 
 
 
 ## Project Description
 
-My portfolio website will include a short bio, links to all my projects, and a contact form. The layout I have in mind will highlight my best/favorite project while showing recent projects in a carousel. I'm inspired by blogs like [EggCanvas](https://www.eggcanvas.com/) and my friend's [personal website](https://www.isabelcalkins.com/). I find their layouts really appealing and modern, which I hope to embody in this project. I'm also taking elements from [my own website](https://rianashahid.com/about), which was created on pre-bulit templates that don't require much coding knowledge. I'm not at a place where I can recreate the entire site from scratch, but I really like the layout I have on my About page, so I plan on doing something similar for my Desktop version. 
+My portfolio website will include a short bio, links to all my projects, and a contact form. The layout I have in mind will highlight my best/favorite project while showing recent projects in a carousel. I'm inspired by blogs like [EggCanvas](https://www.eggcanvas.com/) and my friend's [personal website](https://www.isabelcalkins.com/). I find their layouts really appealing and modern, which I hope to embody in this project. I'm also taking elements from [my own website](https://rianashahid.com/about), which was created on pre-built templates that don't require much coding knowledge. I'm not at a place where I can recreate the entire site from scratch, but I really like the layout I have on my About page, so I plan on doing something similar for my Desktop version. 
 
 ## Google Sheet
 
@@ -37,6 +37,9 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 * [Desktop](https://i.imgur.com/R0TOVMO.png)
  
   Unlike the other two versions, my bio is at the top. I felt this would be more appropriate for desktop because it's easier for users to scroll down to get to the projects. On a smaller screen, where users will probably spend less time per page, it's better to have projects at the top, to make sure viewers will see it. 
+
+**UPDATE**  
+After seeing how the page looked, I ended up getting rid of the full-width project I had underneath the carousels. I also opted to leave my About section at the bottom of the page in the desktop version. I also implemented a parallax scrolling element at the top of my desktop version. 
 
 ## Time/Priority Matrix 
 
@@ -76,36 +79,49 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
 | Working with API| M | 3hr | 4hr|
 | Contact Form | M | 2hrs|  1.5hr | 
 | Social Media Icons | L | 1hr | 1hr |
-| About Me | M | 1hr | hr |
-| Styling/Images | M | 3 hr | hr |
-| Total | - | 19hrs| hrs |
+| About Me | M | 1hr | 1hr |
+| Styling/Images | M | 3 hr | 3hr |
+| Total | - | 19hrs| 21hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Carousel | H | 3hr| hr | 
-| Show Project Desc on Hover | M | 3hr | hr |
+| Carousel | H | 3hr| 2hr | 
+| Show Project Desc on Hover | M | 3hr | 3hr |
 | ~~Materialize~~ | ~~H~~ | ~~4hr~~ | ~~hr~~ |
-| Bootstrap | H | 4hr | hr |
-| Make Logo Image | L | 2hr | hr |
-| Total | H | 16hrs| hrs |
+| Bootstrap | H | 4hr | 4hr |
+| Make Logo Images | L | 2hr | 1hr |
+| Total | H | 16hrs| 10hrs |
 
 ## Additional Libraries
 This section will contain all supporting libraries.
-
-<!-- add bootstrap once I do the carousel -->
+* Carousel made with [Bootstrap](https://getbootstrap.com/docs/4.0/components/carousel/)
+* Contact form submissions facilitated by [Formspree](https://formspree.io/forms)
+* Logos and non-project images from [Canva](https://canva.com)
+* Icons from [FontAwesome](https://fontawesome.com/icons?d=gallery&m=free)
 
 ## Code Snippet
 
-This section will contain interesting code snippets (likely will include parallax scrolling)
-<!-- add code for how I embedded the content from my google sheet -->
+Here's how I got a parallax scrolling effect:
+```
+.hero-image {
+        display: block;
+        background-image: url("images/cover_image\ \(1\).png");
+        min-height: 900px;
+	    width: 100%;
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+    }
+```
 
 ## Issues and Resolutions
 
 **9/14**  
 * Bootstrap's breakpoint for mobile (576px) was smaller than the breakpoint I had set (768px)
 
-  My original navbar (bootstrap) was expanding from a hamburger to a regular navbar much sooner than the rest of the page. I initially just changed my mobile breakpoint to 576px, but I ended up not using Bootstrap's navbar.
+  My original navbar (bootstrap) was expanding from a hamburger to a regular navbar much sooner than the rest of the page. I initially just changed my mobile breakpoint to 576px, but I ended up not using Bootstrap's navbar at all, so I changed my breakpoint back to the original value.
 
 **9/15**  
 * My footer overlapped the end of the content above it only when in a wider screen. I implemented some weird grid setting and it seems to have fixed it.
@@ -117,11 +133,13 @@ This section will contain interesting code snippets (likely will include paralla
         grid-template: 23fr 1fr / 100%; 
     } 
     ```
-
 **9/16**
 * Implemented code to show project descriptions on hover, but this made the View Project links unclickable. As an alternative, I tried to make each image a link, but this linked every project to that of the last project added.
 
   I made it so hovering over the image toggled backface-visibility from hidden to visible.
+
+**9/17**  
+* I kept having more issues with overlapping divs, so I got rid of the grid layout on the entire page and only used it where necessary.
 <!-- #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object -->
