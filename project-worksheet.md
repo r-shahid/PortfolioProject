@@ -36,10 +36,10 @@ Click [here](https://docs.google.com/spreadsheets/d/1F6TgKH1HQ4Y9KlbVs1zh_r9-1yZ
  
 * [Desktop](https://i.imgur.com/R0TOVMO.png)
  
-  Unlike the other two versions, my bio is at the top. I felt this would be more appropriate for desktop because it's easier for users to scroll down to get to the projects. On a smaller screen, where users will probably spend less time per page, it's better to have projects at the top, to make sure viewers will see it. 
+  Unlike the other two versions, my bio is at the top. I felt this would be more appropriate for desktop because it's easier for users to scroll down to get to the projects. On a smaller screen, where users will probably spend less time per page, I wanted to keep projects at the top, to make sure viewers will see it. 
 
 **UPDATE**  
-After seeing how the page looked, I ended up getting rid of the full-width project I had underneath the carousels. I also opted to leave my About section at the bottom of the page in the desktop version. I also implemented a parallax scrolling element at the top of my desktop version. 
+After seeing how the page looked, I ended up getting rid of the full-width project I had underneath the carousels. I also opted to leave my About section at the bottom of the page for all versions and implemented a parallax scrolling element at the top of my desktop version. 
 
 ## Time/Priority Matrix 
 
@@ -91,7 +91,7 @@ After seeing how the page looked, I ended up getting rid of the full-width proje
 | ~~Materialize~~ | ~~H~~ | ~~4hr~~ | ~~hr~~ |
 | Bootstrap | H | 4hr | 4hr |
 | Make Logo Images | L | 2hr | 1hr |
-| Total | H | 16hrs| 11hrs |
+| Total | - | 16hrs| 11hrs |
 
 ## Additional Libraries
 This section will contain all supporting libraries.
@@ -100,7 +100,7 @@ This section will contain all supporting libraries.
 * Logos and non-project images from [Canva](https://canva.com)
 * Icons from [FontAwesome](https://fontawesome.com/icons?d=gallery&m=free)
 
-## Code Snippet
+## Code Snippets
 
 An easier way to manage colors throughout my CSS files:
 ```
