@@ -12,7 +12,7 @@ This schedule keeps track of my progress throughout the week.
 |TUE| Core Application Structure (HTML, CSS, etc.) | Complete
 |THU| MVP & Bug Fixes | Complete
 |THU| Final Touches | Complete
-|FRI| Present | Incomplete
+|FRI| Present | Complete
 
 
 
